@@ -48,3 +48,38 @@
   <img id="birdImage" class="image" src="bird.jpg" alt="Bird" />
 </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<style>
+    .image {
+      max-width: 100%;
+      height: auto;
+      display: none;
+    }
+  </style>
+<script>
+
+      var inputText = document.getElementById('result').value;
+      var images = document.getElementsByClassName('image');
+      
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.display = 'none';
+      }
+      
+      if (inputText.toLowerCase().includes('yes')) {
+        document.getElementById('check').style.display = 'block';
+      }
+      
+      if (inputText.toLowerCase().includes('no')) {
+        document.getElementById('redX').style.display = 'block';
+      }
+
+  </script>
+<body>
+<p id="result" style="padding-top: 12px; padding-right: 12px; padding-bottom: 12px; border-left: 4px solid rgb(208, 208, 208); font-style: italic;">{{result}}</p>
+<p style="padding-top: 12px; padding-right: 12px; padding-bottom: 12px; border-left: 4px solid rgb(208, 208, 208); font-style: italic;">{{message}}</p>
+<img id="check" class="image" src="https://401autowebappprod.s3.ca-central-1.amazonaws.com/groupWebsiteAsset/greenCheck.png" alt="Dog"> 
+<img id="redX" class="image" src="https://401autowebappprod.s3.ca-central-1.amazonaws.com/groupWebsiteAsset/pngwing.com.png" alt="Bird">
+</body>
+</html>
