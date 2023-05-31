@@ -29,6 +29,7 @@ const App = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    setStatus('');
     setAnswers((prevState) => ({
       ...prevState,
       [name]: value,
@@ -139,6 +140,7 @@ const App = () => {
                       }
                       onSelectdropDownDataHandler={(e) => {
                         setAnswers({ ...answers, [input.name]: e });
+                        setStatus('');
                       }}
                   />
                         </Col>

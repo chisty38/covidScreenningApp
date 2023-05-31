@@ -92,7 +92,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 1%;
     font-size: calc(0.7rem + 0.7vw);
     color:rgb(189, 137, 107);
 }
@@ -142,8 +142,8 @@
 
     .Container_AboutUs {
         width: 90%;
-        min-height: 90vh;
-        margin-top: 10%;
+        min-height: 95vh;
+        margin-top: 5%;
         padding: 0px 0px;
     }
 
