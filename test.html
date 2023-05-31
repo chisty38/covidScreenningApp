@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Email Template</title>
+  <style>
+    .image {
+      max-width: 100%;
+      height: auto;
+      display: none;
+    }
+  </style>
+  <script>
+    function showImages() {
+      var inputText = document.getElementById('inputText').value;
+      var images = document.getElementsByClassName('image');
+      
+      for (var i = 0; i < images.length; i++) {
+        images[i].style.display = 'none';
+      }
+      
+      if (inputText.toLowerCase().includes('cat')) {
+        document.getElementById('catImage').style.display = 'block';
+      }
+      
+      if (inputText.toLowerCase().includes('dog')) {
+        document.getElementById('dogImage').style.display = 'block';
+      }
+      
+      if (inputText.toLowerCase().includes('bird')) {
+        document.getElementById('birdImage').style.display = 'block';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Email Template</h1>
+  
+  <label for="inputText">Enter your message:</label><br>
+  <input type="text" id="inputText" value="yes"><br>
+  <button onclick="showImages()">Show Images</button><br>
+  
+  <p>
+    Your message: <span id="outputText"></span>
+  </p>
+  
+  <img id="catImage" class="image" src="cat.jpg" alt="Cat" />
+  <img id="dogImage" class="image" src="dog.jpg" alt="Dog" />
+  <img id="birdImage" class="image" src="bird.jpg" alt="Bird" />
+</body>
+</html>

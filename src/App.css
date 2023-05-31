@@ -1,0 +1,151 @@
+.Container_AboutUs {
+    width: 60%;
+    height: 60vh;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 0px 60px;
+    border-radius: 10px;
+    border: 10px black;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+
+}
+
+
+#Container_AboutUs_header h1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: calc(0.7rem + 1vw);
+}
+
+#Container_AboutUs_Form {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Container_AboutUs_Form_Child_inputCol .formInput {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin: 2vh;
+}
+
+#Container_AboutUs_Form_Child_inputCol #inputFormCommon label h6,
+#dropButtonDiv label h6 {
+    font-weight: 600;
+    font-size: calc(0.4rem + 0.6vw);
+    color: gray;
+    /*margin-left: 5%;*/
+}
+
+
+#Container_AboutUs_Form_Child_inputCol,
+#Container_AboutUs_Form_Child,
+#Container_AboutUs_Form_Btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_Submit {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    padding-top: 8px;
+    justify-content: center;
+    align-content: center;
+    width: 10vw;
+    height: 40px;
+    background-color: rgb(124, 173, 96);
+}
+
+.formSection .btn {
+    background-color: rgb(218, 196, 149);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border: white;
+    color: #0b0b11;
+    font-weight: bold;
+    border-radius: 15px;
+    height: 48px;
+}
+
+#Container_AboutUs_Form_Btn {
+    margin-top: 5vh;
+}
+
+#Container_AboutUs_Form_Response
+{
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Container_AboutUs_Form_Response h4 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    font-size: calc(0.7rem + 0.7vw);
+    color:rgb(189, 137, 107);
+}
+
+
+@media only screen and (max-width: 750px) {
+
+    .Container_AboutUs {
+        width: 90%;
+        min-height: 80vh;
+        margin-top: 17%;
+        padding: 0px 0px;
+    }
+
+    #Container_AboutUs_header h1 {
+        margin-top: 10%;
+        margin-bottom: 5%;
+        font-size: calc(0.7rem + 1.5vw);
+    }
+
+    #Container_AboutUs_Form {
+        width: 100%;
+    }
+
+    #FormContainer {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #inputFormCommon,
+    #dropButtonDiv {
+        width: 80%;
+    }
+
+    #Container_AboutUs_Form_Child_inputCol #inputFormCommon label h6,
+    #dropButtonDiv label h6 {
+        font-weight: 700;
+        font-size: calc(0.5rem + 1vw);
+    }
+
+    #btn_Submit {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 385px) {
+
+    .Container_AboutUs {
+        width: 90%;
+        min-height: 90vh;
+        margin-top: 10%;
+        padding: 0px 0px;
+    }
+
+   
+}

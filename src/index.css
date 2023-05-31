@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*background: #ADA996;   fallback for old browsers */
+/*background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);   Chrome 10-25, Safari 5.1-6 */
+/*background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/*code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}*/
+
+.navbar .cursor-pointer
+{
+    margin-left: 8vh;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.LogInPage {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addLocation {
+  margin-top: 30px;
+  margin-left: 30px;
+  height: 80vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:burlywood;
+}
+
+
+.addGMList
+{
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 80vh;
+  min-width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:burlywood;
+}
+
+.addGMList form .form-inner .form-group {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  margin-bottom: 15px;
+  
+}
+
+#logInError
+{
+    width: 80%;
+}
+
+.welcome {
+  width: 100%;
+  max-width: 480px;
+  background-color: #fff;
+  padding: 15px 30px;
+}
+
+
+.welcome h2 {
+  color: #888;
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.welcome h2 span{
+  color: #FE4880;
+  font-weight: 700;
+}
+
+.mainContainer 
+{
+  width: 100%;
+  padding-top: 1px;
+  display: flex;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.d-flex .btn{
+  position: sticky !important;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+.navbar.transparent {
+  background-color: #212121;
+  opacity: .85;
+}
+
+.allLocationBtnFloat {
+  margin-bottom: 200px;
+}
+
+.locationDropDown {
+  width: 100%;
+}
+
+.btn-locdrop{
+  width: 30vh;
+}
+
+.btn-locdropLoc{
+  width: 36vh;
+  margin-left: 3vh;
+  margin-right: 2vh;
+}
+
+.custom-btn-locdrop{
+  
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: 0.4s;
+  height: 72px;
+  margin-left: 0;
+  padding-left: 0%;
+}
+.mb-2 .btn-form-sm
+{
+  font-size: xx-small;
+  color: #212121;
+}
+
+
+.dropdown-menu{
+  position: absolute;
+    z-index: 1000;
+    display: none;
+    min-width: 10rem;
+    max-height: 280px;
+    overflow-y: auto;
+    padding: 0.5rem 0;
+    margin: 0;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 0.25rem;
+}
+
+.gmFormControl
+{
+  display: flex;
+
+}
+.gmFormControl table
+{
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+.editUserPage .btn{
+  margin-top: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: large;
+}
+
+.editUserPage
+{
+  margin-top: 30px;
+  margin-left: 30px;
+  height: 80vh;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:burlywood;
+}
+
+.editUserPage form .form-inner .form-group {
+  display: block;
+  width: 320px;
+  margin-bottom: 15px;
+  
+}
+
+.editUserPage form .form-inner h2{
+  margin-bottom: 25px;
+}
+
+.editUserPage .btn{
+  margin-top: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: large;
+}
+
+.editUserPage .form-control
+{
+  font-size: large;
+}
+
+#navLogoImg
+{
+    width: 200px;
+}
+
+
+
+
