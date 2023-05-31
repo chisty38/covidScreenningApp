@@ -1,4 +1,4 @@
-.Container_AboutUs {
+.Container_Response {
     width: 60%;
     height: 60vh;
     margin-top: 10%;
@@ -14,7 +14,7 @@
 }
 
 
-#Container_AboutUs_header h1 {
+#Container_Response_header h1 {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -23,20 +23,20 @@
     font-size: calc(0.7rem + 1vw);
 }
 
-#Container_AboutUs_Form {
+#Container_Response_Form {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
-#Container_AboutUs_Form_Child_inputCol .formInput {
+#Container_Response_Form_Child_inputCol .formInput {
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     margin: 2vh;
 }
 
-#Container_AboutUs_Form_Child_inputCol #inputFormCommon label h6,
+#Container_Response_Form_Child_inputCol #inputFormCommon label h6,
 #dropButtonDiv label h6 {
     font-weight: 600;
     font-size: calc(0.4rem + 0.6vw);
@@ -45,9 +45,9 @@
 }
 
 
-#Container_AboutUs_Form_Child_inputCol,
-#Container_AboutUs_Form_Child,
-#Container_AboutUs_Form_Btn {
+#Container_Response_Form_Child_inputCol,
+#Container_Response_Form_Child,
+#Container_Response_Form_Btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,11 +76,11 @@
     height: 48px;
 }
 
-#Container_AboutUs_Form_Btn {
+#Container_Response_Form_Btn {
     margin-top: 5vh;
 }
 
-#Container_AboutUs_Form_Response
+#Container_Response_Form_Response
 {
     margin-top: 3vh;
     display: flex;
@@ -88,7 +88,7 @@
     align-items: center;
 }
 
-#Container_AboutUs_Form_Response h4 {
+#Container_Response_Form_Response h4 {
     align-items: center;
     display: flex;
     justify-content: center;
@@ -100,20 +100,20 @@
 
 @media only screen and (max-width: 750px) {
 
-    .Container_AboutUs {
+    .Container_Response {
         width: 90%;
         min-height: 80vh;
         margin-top: 17%;
         padding: 0px 0px;
     }
 
-    #Container_AboutUs_header h1 {
+    #Container_Response_header h1 {
         margin-top: 10%;
         margin-bottom: 5%;
         font-size: calc(0.7rem + 1.5vw);
     }
 
-    #Container_AboutUs_Form {
+    #Container_Response_Form {
         width: 100%;
     }
 
@@ -127,7 +127,7 @@
         width: 80%;
     }
 
-    #Container_AboutUs_Form_Child_inputCol #inputFormCommon label h6,
+    #Container_Response_Form_Child_inputCol #inputFormCommon label h6,
     #dropButtonDiv label h6 {
         font-weight: 700;
         font-size: calc(0.5rem + 1vw);
@@ -140,7 +140,7 @@
 
 @media only screen and (max-width: 385px) {
 
-    .Container_AboutUs {
+    .Container_Response {
         width: 90%;
         min-height: 95vh;
         margin-top: 5%;

@@ -12,30 +12,32 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
 
 const App = () => {
+  //variable to save response
   const [answers, setAnswers] = useState({
     question1: "",
     question2: "",
     question3: "",
-    user_email: ""
+    user_email: "",
   });
-  const [status, setStatus] = useState('');
+  //variable to set status
+  const [status, setStatus] = useState("");
 
-  const handleAnswerChange = (question, answer) => {
-    setAnswers((prevAnswers) => ({
-      ...prevAnswers,
-      [question]: answer,
-    }));
-  };
-
+  //  const handleAnswerChange = (question, answer) => {
+  //    setAnswers((prevAnswers) => ({
+  //      ...prevAnswers,
+  //      [question]: answer,
+  //    }));
+  //  };
+  //function to update user email
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setStatus('');
+    setStatus("");
     setAnswers((prevState) => ({
       ...prevState,
       [name]: value,
     }));
   };
-
+  //function to handle form data submission
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -50,7 +52,6 @@ const App = () => {
       (answer) => answer === "NO"
     );
     const result = hasNoAnswer ? "NO" : "YES";
-    //const result = hasNoAnswer ? '<span style="color: red;">&#10060;</span>' : '<span style="color: green;">&#10004;</span>';
 
     const message = `You ${
       hasNoAnswer ? "should not enter the" : "may enter the"
@@ -64,7 +65,7 @@ const App = () => {
     // Send email with the result
     sendEmail(result, message, answers.user_email, canvas);
   };
-
+  //function to send email
   const sendEmail = (result, message, user_email, canvas) => {
     emailjs
       .send(
@@ -80,91 +81,97 @@ const App = () => {
       )
       .then((response) => {
         console.log("Email sent:", response);
-        if(response.status === 200)
-        {
-            setStatus('Your response received !!!');
-            setAnswers({ ...answers, question1: "",
+        if (response.status === 200) {
+          setStatus("Your response received !!!");
+          setAnswers({
+            ...answers,
+            question1: "",
             question2: "",
             question3: "",
-            user_email: "" });
+            user_email: "",
+          });
         }
         console.log(response.status);
       })
       .catch((error) => {
+        //error handling
+        setStatus(error);
         console.error("Email error:", error);
       });
   };
 
   return (
-    <div className="Container_AboutUs">
+    <div className="Container_Response">
       <Container id="FormContainer">
         <Row>
-          <Col xs={12} sm={12} md={12} lg={12} id="Container_AboutUs_header">
+          <Col xs={12} sm={12} md={12} lg={12} id="Container_Response_header">
             <h1>COVID DOOR SCREENING</h1>
           </Col>
         </Row>
-        
-          <Row id="Container_AboutUs_Form">
+
+        <Row id="Container_Response_Form">
           <Col xs={12} sm={12} md={12} lg={12}>
-          <form className="formSection" onSubmit={handleSubmit}>
-          <Row id="Container_AboutUs_Form_Child">
-          {inputs.map((input) => (
-                        <Col
-                        xs={12}
-                        sm={12}
-                        md={12}
-                        lg={6}
-                        id="Container_AboutUs_Form_Child_inputCol"
-                      >
-                            <FormInput
-                            key={input.id}
-                            {...input}
-                            value={answers[input.name]}
-                            onChange={handleChange}
-                        />
-                        </Col>
-                    ))}
-                    {inputsDropDown.map((input) => (
-                        <Col
-                        xs={12}
-                        sm={12}
-                        md={12}
-                        lg={6}
-                        id="Container_AboutUs_Form_Child_inputCol"
-                      >
-                            <DropDownInput
-                    key={input.id}
-                    {...input}
-                    values={
-                        answers[input.name] ? answers[input.name] : input.placeholder
+            <form className="formSection" onSubmit={handleSubmit}>
+              <Row id="Container_Response_Form_Child">
+                {inputs.map((input) => (
+                  <Col
+                    xs={12}
+                    sm={12}
+                    md={12}
+                    lg={6}
+                    id="Container_Response_Form_Child_inputCol"
+                  >
+                    <FormInput
+                      key={input.id}
+                      {...input}
+                      value={answers[input.name]}
+                      onChange={handleChange}
+                    />
+                  </Col>
+                ))}
+                {inputsDropDown.map((input) => (
+                  <Col
+                    xs={12}
+                    sm={12}
+                    md={12}
+                    lg={6}
+                    id="Container_Response_Form_Child_inputCol"
+                  >
+                    <DropDownInput
+                      key={input.id}
+                      {...input}
+                      values={
+                        answers[input.name]
+                          ? answers[input.name]
+                          : input.placeholder
                       }
                       onSelectdropDownDataHandler={(e) => {
                         setAnswers({ ...answers, [input.name]: e });
-                        setStatus('');
+                        setStatus("");
                       }}
-                  />
-                        </Col>
-                    ))}
-                    </Row>
-                    <Row id="Container_AboutUs_Form_Btn">
-                    <Col
-                        xs={12}
-                        sm={12}
-                        md={12}
-                        lg={12}
-                      >
-                        <Button variant="danger" type="submit" id="btn_Submit">
+                    />
+                  </Col>
+                ))}
+              </Row>
+              <Row id="Container_Response_Form_Btn">
+                <Col xs={12} sm={12} md={12} lg={12}>
+                  <Button variant="danger" type="submit" id="btn_Submit">
                     SUBMIT
                   </Button>
-                        </Col>
-                    </Row>
-                    
-                    </form>
+                </Col>
+              </Row>
+            </form>
           </Col>
-          </Row>
-          <Row>
-          <Col xs={12} sm={12} md={12} lg={12} id="Container_AboutUs_Form_Response">
-          <h4>{status}</h4>
+        </Row>
+        <Row>
+          <Col
+            xs={12}
+            sm={12}
+            md={12}
+            lg={12}
+            id="Container_Response_Form_Response"
+          >
+            <h4>{status}</h4>
           </Col>
         </Row>
       </Container>
@@ -174,8 +181,8 @@ const App = () => {
 
 export default App;
 
-
-{/*<form className="contact-form" onSubmit={handleSubmit}>
+{
+  /*<form className="contact-form" onSubmit={handleSubmit}>
         <div>
           <label>Email</label>
           <input
@@ -224,4 +231,5 @@ export default App;
           </select>
         </div>
         <button type="submit">Submit</button>
-      </form>*/}
+      </form>*/
+}
