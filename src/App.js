@@ -6,8 +6,8 @@ import { inputs, inputsDropDown } from "./Data/Data";
 import FormInput from "./formInput/FormInput";
 import DropDownInput from "./formInput/DropDownInput";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js"; // without this two responsive nav will not work
-import "bootstrap/dist/js/bootstrap.min.js"; // without this two responsive nav will not work
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; 
+import "bootstrap/dist/js/bootstrap.min.js"; 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./App.css";
 
@@ -22,12 +22,6 @@ const App = () => {
   //variable to set status
   const [status, setStatus] = useState("");
 
-  //  const handleAnswerChange = (question, answer) => {
-  //    setAnswers((prevAnswers) => ({
-  //      ...prevAnswers,
-  //      [question]: answer,
-  //    }));
-  //  };
   //function to update user email
   const handleChange = (e) => {
     const { name, value } = e.target;
